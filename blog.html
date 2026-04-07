@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="blog.css">
+    <title>blog page </title>
+</head>
+
+<body>
+ <!-- nav-bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Adaptive Learning System</a></div>
+            <ul class="links">
+                <li><a href="home">Home</a></li>
+                <li><a href="Blog">Blog</a></li>
+                <li><a href="Dashboard">Dashboard</a></li>
+            </ul>
+            <a href="#" class="action_btn">Sign-up</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu ">
+            <li><a href="home">Home</a></li>
+            <li><a href="Blog">Blog</a></li>
+            <li><a href="Dashboard">Dashboard</a></li>
+            <li><a href="#" class="action_btn">Login</a></li>
+            <li><a href="#" class="action_btn">Sign-up</a></li>
+        </div>
+    </header>
+
+<!-- blog-hero -->
+    <section class="blog_pg">
+        <h1>Learn At Your Own Pace, Understand Better</h1>
+        <p>Adaptive learning is changing how students learn by allowing lessons to adjust to individual needs. 
+            In Offa secondary schools, this approach is helping students better understand subjects by learning at their own pace. 
+            While it improves engagement and performance, challenges such as limited access to technology remain. Despite these issues, 
+            adaptive learning offers a promising future for education in Offa.</p>
+        <p class="ani_mation"><i class="fa-solid fa-sort-down"></i></p>    
+        <p class="ani_mation"><i class="fa-solid fa-sort-down"></i></p>    
+        <p class="ani_mation"><i class="fa-solid fa-sort-down"></i></p>      
+    </section>
+
+<!-- FEATURES -->
+    <section class="fe_1">
+        <h2 class="down_fe"> Why Build An Adaptive System For Local Communities</h2>
+        <p> Here's why implementing adaptive learning systems in local communities like Offa is a strong idea</p>
+        <div class="pro-container">
+            <div class="pro">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="des">
+                    <h2>Personalized Learning For all students</h2>
+                    <p>Not all students learn at the same pace.
+                       Adaptive systems help students who struggle catch up and challenge students who excel.</p>
+                </div>
+            </div>
+
+             <div class="pro">
+                <i class="fa-solid fa-calendar"></i>
+                <div class="des">
+                    <h2>Improved Academic Performance</h2>
+                    <p>By adjusting lessons to individual needs, students better understand difficult topics,
+                         improving overall test scores and learning outcomes..</p>
+                </div>
+            </div>
+
+            <div class="pro">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="des">
+                    <h2>Teacher Support and Efficiency</h2>
+                    <p>Adaptive systems track student progress automatically, 
+                        helping teachers identify struggling students without spending extra hours on manual grading.</p>
+                </div>
+            </div>
+
+             <div class="pro">
+                <i class="fa-solid fa-book"></i>
+                <div class="des">
+                    <h2>Bridging Educational Gaps</h2>
+                    <p>Communities with limited access to quality teaching resources benefit the most. 
+                        Adaptive learning provides high-quality instruction to every student, even in resource-limited settings.</p>
+                </div>
+            </div>
+
+             <div class="pro">
+                <i class="fa-solid fa-angles-right"></i>
+                <div class="des">
+                    <h2>Future-Ready Skills</h2>
+                    <p>Early exposure to technology prepares students for modern workplaces and higher education environments.</p>
+                </div>
+            </div>
+
+            <div class="pro">
+              <i class="fa-solid fa-chart-line"></i>
+                <div class="des">
+                    <h2>Cost-Effective and Scalable</h2>
+                    <p>Once set up, adaptive systems can teach large numbers of 
+                        students without compromising quality, making education more accessible for all.</p>
+                </div>
+            </div>
+
+            <div class="pro">
+                <i class="fa-brands fa-codepen"></i>
+                <div class="des">
+                    <h2>Adaptive systems collect data on how students in the community are learning.</h2>
+                    <p>This helps local schools understand
+                         their specific challenges and improve teaching methods based on real needs.</p>
+                </div>
+            </div>
+
+            <div class="pro">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="des">
+                    <h2>Supports Underserved and Rural Areas</h2>
+                    <p>Adaptive learning helps bring structured and personalized
+                         education even to schools with fewer teachers and resources.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- javascript -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropdownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+</html>

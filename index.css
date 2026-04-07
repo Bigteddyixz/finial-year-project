@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('https://images.unsplash.com/photo-1601277161746-88c97f548738?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: purple;
+}
+
+/* HEADER */
+header{
+    background-color: rgb(164, 237, 237);
+    position: sticky;
+    top: 0;
+    padding: 0 2rem;
+    z-index: 1000;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display:flex ;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color:#000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: purple;
+    color:#fff;
+    padding: 0.5rem 1rem;
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.action_btn:hover{
+    scale:1.05;
+    color:#fff;
+}
+
+.action_btn::active{
+    scale:0.95;
+}
+
+.form-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 720px;
+    width: 100%;
+    background: #fff;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.form-popup .form-box{
+    display: flex;
+}
+
+.form-box. .form-details{
+    max-width: 330px;
+}
+
+.form-box h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-box .form-content{
+    width: 100%;
+    padding: 35px;
+}
+
+form .input-field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+form .input-field input{
+ width: 100%;
+ height: 100%;
+ outline: none;
+ padding: 0 15px;
+ font-size: 0.95rem;
+ border-radius: 3px;
+ border: 1px solid #717171;
+}
+
+.input-field input:is(:focus, :valid){
+    padding: 16px 15px 0;
+}
+
+form .input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #717171;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ label{
+    color: purple;
+    font-size: 0.75rem;
+    transform: translateY(-120%);
+}
+/* DROPDOWN MENU */
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgb(164, 237, 237) ;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+.dropdown-menu li{
+    padding:0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* HERO */
+.hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:  #fff;
+}
+
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p{
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+
+}
+
+.hero_btn{
+     background-color: purple;
+    color:#fff;
+    padding: 0.5rem 2rem;
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.hero_btn:hover{
+    color: black;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+
+    }
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+@media(max-width: 992px){
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+    .hero h1{
+        font-size: 1.5rem;
+    }
+    .hero p{
+        font-size: 1rem;
+    }
+}

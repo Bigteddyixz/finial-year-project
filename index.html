@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>blog page </title>
+</head>
+<body>
+<!-- NAVBAR -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Adaptive Learning System</a></div>
+            <ul class="links">
+                <li><a href="home">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="Dashboard">Dashboard</a></li>
+            </ul>
+            <a href="#" class="action_btn">Sign-up</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu ">
+            <li><a href="home">Home</a></li>
+            <li><a href="Blog">Blog</a></li>
+            <li><a href="Dashboard">Dashboard</a></li>
+            <li><a href="#" class="action_btn">Login</a></li>
+            <li><a href="#" class="action_btn">Sign-up</a></li>
+        </div>
+    </header>
+
+<!-- HERO -->
+    <section class="hero">
+        <h1> WELCOME</h1>
+        <p>What if every student could learn at their own pace and still succeed!!</p>
+        <a href="blog.html" class="hero_btn"  <i class="fa-solid fa-arrow-right"></i>>Blog</a>
+    </section>
+
+<!-- POPUP FORM -->
+    <div class="form-popup">
+        <div class="form-box">
+            <div class="form-details">
+                <h2> Welcome Back</h2>
+                <p> Please log in using your personal information to stay connected with us.</p>
+            </div>
+             <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                     <div class="input-field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass"> Forgot Password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#">SignUp</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- javascript -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropdownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+</html>
